@@ -2,5 +2,5 @@
 # Palliative-care
 This repository is for the girlathon that my team is attending
 <br>
-Author - Devika (S girlathon)
+Authors - Devika S Kumar, Sivapriya K M, Fathima Parveen
 
