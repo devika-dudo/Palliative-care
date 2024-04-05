@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgb(52, 47, 47);
+    padding: 20px 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    order: -1;
+}
+.logo img {
+    width: 50px;
+    height: 40px;
+    margin-right: 20px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+nav ul li a:link,
+nav ul li a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: lightgray; /* Change to the desired color when hovering */
+}
+
+
+
+.hero {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOyJXwHqhfjSIRuzJxOf4pbQIMs7Nre3zY7Q&s');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 200px 200px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.about, .services, .contact {
+    padding: 100px 0;
+    text-align: center;
+}
