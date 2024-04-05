@@ -1,0 +1,97 @@
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .question-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+/* Style for the toggle container */
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the toggle label */
+.toggle-label {
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+/* Style for the toggle input */
+.toggle-input {
+  display: none; /* Hide the actual radio button */
+}
+
+/* Style for the toggle indicator */
+.toggle-indicator {
+  width: 30px; /* Adjust size as needed */
+  height: 15px; /* Adjust size as needed */
+  background-color: #ccc; /* Default background color */
+  border-radius: 15px; /* Make it round */
+  position: relative;
+  cursor: pointer;
+}
+
+/* Style for the toggle indicator when selected */
+.toggle-input:checked + .toggle-indicator {
+  background-color: #007bff; /* Change background color when selected */
+}
+
+/* Style for the toggle thumb */
+.toggle-thumb {
+  width: 15px; /* Adjust size as needed */
+  height: 15px; /* Adjust size as needed */
+  background-color: #fff; /* Thumb color */
+  border-radius: 50%; /* Make it round */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Style for the toggle thumb position when selected */
+.toggle-input:checked + .toggle-indicator .toggle-thumb {
+  transform: translateX(15px); /* Move the thumb to the right */
+}

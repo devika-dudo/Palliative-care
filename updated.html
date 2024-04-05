@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="updated.css">
+<title>symptom prediction questionnaire</title>
+<script src="updated.js"></script>
+</head>
+<body>
+
+<h2>Welcome to CareCove's symptom prediction questionnaire</h2>
+
+<form onsubmit="return validateForm()">
+  <h3>Question 1:</h3>
+  <label for="age">Enter your age:</label>
+  <input type="number" id="age" name="age" required>
+
+  <h3>Question 2:</h3>
+  <p>Enter you sex</p>
+  <ul>
+    <li><input type="radio" name="q2" value="Male" Onclick="toggleselection(this)">Male</li>
+    <li><input type="radio" name="q2" value="female" Onclick="toggleselection(this)"> Female</li>
+    </ul>
+
+    <h3>Question 3:</h3>
+    <p>Are you an inpatient or outpatient?</p>
+    <ul>
+      <li><input type="radio" name="q3" value="Inpatient" Onclick="toggleselection(this)">Inpatient </li>
+        
+      <li><input type="radio" name="q3" value="Outpatient"Onclick="toggleselection(this)"> Outpatient</li>
+      </ul>
+  
+      <h3>Question 4:</h3>
+      <p>Are you a smoker?</p>
+      <ul>
+        <li><input type="radio" name="q4" value="Inpatient" Onclick="toggleselection(this)">Inpatient </li>
+          
+        <li><input type="radio" name="q4" value="Outpatient"Onclick="toggleselection(this)"> Outpatient</li>
+        </ul>
+    
+        <h3>Question 5:</h3>
+       <p>ECOG performance</p>
+        <ul>
+      <li><input type="radio" name="q5" value="0" Onclick="toggleselection(this)" >0</li>
+      <li><input type="radio" name="q5" value="1" Onclick="toggleselection(this)">1</li>
+      <li><input type="radio" name="q5" value="2" Onclick="toggleselection(this)">2</li>
+      <li><input type="radio" name="q5" value="3" Onclick="toggleselection(this)">3</li>
+      <li><input type="radio" name="q5" value="4" Onclick="toggleselection(this)">4</li>
+      </ul>
+
+       <h3>Question 6:</h3>
+       <p>Is there a decrease in food intake by the patient?</p>
+        <ul>
+      <li><input type="radio" name="q6" value="yes"Onclick="toggleselection(this)" > yes</li>
+      <li><input type="radio" name="q6" value="no"Onclick="toggleselection(this)" >no</li>
+       </ul>
+
+       <h3>Question 7:</h3>
+       <p>Does the patient have nausea?</p>
+        <ul>
+      <li><input type="radio" name="q7" value="severe" Onclick="toggleselection(this)">severe</li>
+      <li><input type="radio" name="q7" value="yes"Onclick="toggleselection(this)" >yes</li>
+      <li><input type="radio" name="q7" value="no"Onclick="toggleselection(this)" >no</li>
+      <li><input type="radio" name="q7" value="moderate"Onclick="toggleselection(this)" >moderate</li>
+      <li><input type="radio" name="q7" value="mild" Onclick="toggleselection(this)">mild</li>
+       </ul>
+
+       <h3>Question 8:</h3>
+       <p>Does the patient have abdominal distention?</p>
+        <ul>
+      <li><input type="radio" name="q8" value="severe" Onclick="toggleselection(this)">severe</li>
+      <li><input type="radio" name="q8" value="yes" Onclick="toggleselection(this)">yes</li>
+      <li><input type="radio" name="q8" value="no" Onclick="toggleselection(this)" >no</li>
+      <li><input type="radio" name="q8" value="moderate"Onclick="toggleselection(this)" >moderate</li>
+      </ul>
+
+      <h3>Question 9:</h3>
+       <p>Does the patient have edema?</p>
+        <ul>
+      <li><input type="radio" name="q9" value="yes"Onclick="toggleselection(this)" >yes</li>
+      <li><input type="radio" name="q9" value="no" Onclick="toggleselection(this)">no</li>
+      <li><input type="radio" name="q9" value="moderate"Onclick="toggleselection(this)" >moderate</li>
+      </ul>
+
+      <h3>Question 10:</h3>
+       <p>Does the patient experience sleep disturbance?</p>
+        <ul>
+      <li><input type="radio" name="q10" value="severe"Onclick="toggleselection(this)" >severe</li>
+      <li><input type="radio" name="q10" value="yes"Onclick="toggleselection(this)" >yes</li>
+      <li><input type="radio" name="q10" value="no" Onclick="toggleselection(this)">no</li>
+      <li><input type="radio" name="q10" value="mild"Onclick="toggleselection(this)" >mild</li>
+       </ul>
+
+       <h3>Question 11:</h3>
+       <p>Does the patient experience pain?</p>
+        <ul>
+      <li><input type="radio" name="q11" value="severe"Onclick="toggleselection(this)" >severe</li>
+      <li><input type="radio" name="q11" value="moderate" Onclick="toggleselection(this)">moderate</li>
+      <li><input type="radio" name="q11" value="mild" Onclick="toggleselection(this)">mild</li>
+      <li><input type="radio" name="q11" value="none" Onclick="toggleselection(this)">none</li>
+       </ul>
+
+       <h3>Question 12:</h3>
+       <p>Does the patient experience fatigue?</p>
+        <ul>
+      <li><input type="radio" name="q12" value="severe" Onclick="toggleselection(this)">severe</li>
+      <li><input type="radio" name="q12" value="moderate"Onclick="toggleselection(this)" >moderate</li>
+      <li><input type="radio" name="q12" value="mild" Onclick="toggleselection(this)">mild</li>
+      <li><input type="radio" name="q12" value="none" Onclick="toggleselection(this)">none</li>
+       </ul>
+
+       <h3>Question 13:</h3>
+       <p>Does the patient have dyspnea?</p>
+        <ul>
+      <li><input type="radio" name="q13" value="severe"Onclick="toggleselection(this)" >severe</li>
+      <li><input type="radio" name="q13" value="yes"Onclick="toggleselection(this)" >yes</li>
+      <li><input type="radio" name="q13" value="no" Onclick="toggleselection(this)">no</li>
+      <li><input type="radio" name="q13" value="moderate"Onclick="toggleselection(this)" >moderate</li>
+      <li><input type="radio" name="q13" value="mild"Onclick="toggleselection(this)" >mild</li>
+       </ul>
+
+       <h3>Question 14:</h3>
+       <p>Does the patient experience drowsiness?</p>
+        <ul>
+      <li><input type="radio" name="q14" value="severe" Onclick="toggleselection(this)">severe</li>
+      <li><input type="radio" name="q14" value="no" Onclick="toggleselection(this)">no</li>
+      <li><input type="radio" name="q14" value="moderate"Onclick="toggleselection(this)" >moderate</li>
+      <li><input type="radio" name="q14" value="mild"Onclick="toggleselection(this)" >mild</li>
+       </ul>
+
+       <h3>Question 15(optional):</h3>
+       <p>Does the patient have lung cancer?</p>
+      <ul>
+    <li><input type="radio" name="q15" value="yes"Onclick="toggleselection(this)" >yes</li>
+    <li><input type="radio" name="q15" value="no" Onclick="toggleselection(this)">no</li>
+     </ul>
+
+      <h3>Question 16(optional):</h3>
+     <p>Does the patient have breast cancer?</p>
+      <ul>
+    <li><input type="radio" name="q16" value="yes"Onclick="toggleselection(this)" >yes</li>
+    <li><input type="radio" name="q16" value="no"Onclick="toggleselection(this)" >no</li> 
+      </ul>
+      
+      <h3>Question 17(optional):</h3>
+     <p>Does the patient have colon cancer?</p>
+      <ul>
+    <li><input type="radio" name="q17" value="yes" Onclick="toggleselection(this)">yes</li>
+    <li><input type="radio" name="q17" value="no" Onclick="toggleselection(this)">no</li>
+     </ul>
+
+      <h3>Question 18(optional):</h3>
+     <p>Does the patient have kidney cancer?</p>
+      <ul>
+    <li><input type="radio" name="q18" value="yes"Onclick="toggleselection(this)" >yes</li>
+    <li><input type="radio" name="q18" value="no"Onclick="toggleselection(this)" >no</li>
+    </ul>
+    <h3>Question 19(optional):</h3>
+    <p>Does the patient have head and neck cancer?</p>
+     <ul>
+   <li><input type="radio" name="q19" value="yes" Onclick="toggleselection(this)">yes</li>
+   <li><input type="radio" name="q19" value="no" Onclick="toggleselection(this)">no</li>
+    </ul>
+      <h3>Question 20(optional):</h3>
+    <p>Does the patient have uterus cancer?</p>
+     <ul>
+   <li><input type="radio" name="q20" value="yes"Onclick="toggleselection(this)" >yes</li>
+   <li><input type="radio" name="q20" value="no" Onclick="toggleselection(this)">no</li>
+    </ul>
+     <h3>Question 21(optional):</h3>
+    <p>Does the patient have stomach cancer?</p>
+     <ul>
+   <li><input type="radio" name="q21" value="yes" Onclick="toggleselection(this)">yes</li>
+   <li><input type="radio" name="q21" value="no"Onclick="toggleselection(this)" >no</li>
+    </ul>
+     <h3>Question 22(optional):</h3>
+    <p>Does the patient have lymph node cancer?</p>
+     <ul>
+   <li><input type="radio" name="q22" value="yes" Onclick="toggleselection(this)">yes</li>
+   <li><input type="radio" name="q22" value="no" Onclick="toggleselection(this)">no</li>
+    </ul>
+    <h3>Question 23(optional):</h3>
+       <p>Does the patient have kidney cancer?</p>
+        <ul>
+      <li><input type="radio" name="q23" value="yes"Onclick="toggleselection(this)" >yes</li>
+      <li><input type="radio" name="q23" value="no"Onclick="toggleselection(this)" >no</li>
+       </ul>
+       <h3>Question 24(optional):</h3>
+       <p>Does the patient have brain cancer?</p>
+        <ul>
+      <li><input type="radio" name="q24" value="yes" Onclick="toggleselection(this)">yes</li>
+      <li><input type="radio" name="q24" value="no"Onclick="toggleselection(this)" >no</li>
+       </ul>
+   <h3>Question 25(optional):</h3>
+       <p>Does the patient have bone cancer?</p>
+        <ul>
+      <li><input type="radio" name="q25" value="yes"Onclick="toggleselection(this)" >yes</li>
+      <li><input type="radio" name="q25" value="no" Onclick="toggleselection(this)">no</li>
+       </ul>
+   <h3>Question 26(optional):</h3>
+       <p>Does the patient have esophagus cancer?</p>
+        <ul>
+      <li><input type="radio" name="q26" value="yes"Onclick="toggleselection(this)" >yes</li>
+      <li><input type="radio" name="q26" value="no"Onclick="toggleselection(this)" >no</li>
+       </ul>
+    <h3>Question 27(optional):</h3>
+       <p>Does the patient have prostate cancer?</p>
+        <ul>
+      <li><input type="radio" name="q27" value="yes" Onclick="toggleselection(this)">yes</li>
+      <li><input type="radio" name="q27" value="no" Onclick="toggleselection(this)">no</li>
+    </ul> <h3>Question 28(optional):</h3>
+       <p>Does the patient have ovary cancer?</p>
+        <ul>
+      <li><input type="radio" name="q28" value="yes"Onclick="toggleselection(this)" >yes</li>
+      <li><input type="radio" name="q28" value="no"Onclick="toggleselection(this)" >no</li>
+       </ul>
+   <h3>Question 29(optional):</h3>
+       <p>Does the patient have testicular cancer?</p>
+        <ul>
+      <li><input type="radio" name="q29" value="yes"Onclick="toggleselection(this)" >yes</li>
+      <li><input type="radio" name="q29" value="no" Onclick="toggleselection(this)">no</li>
+       </ul>
+   <h3>Question 30(optional):</h3>
+       <p>Does the patient have cervix cancer?</p>
+        <ul>
+      <li><input type="radio" name="q30" value="yes"Onclick="toggleselection(this)" >yes</li>
+      <li><input type="radio" name="q30" value="no" Onclick="toggleselection(this)">no</li>
+       </ul>
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
